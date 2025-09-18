@@ -104,7 +104,8 @@ class CompanyController extends Controller
 
         $company->delete();
 
-        return response()->json(['message' => 'Deleted']);
+        // return response()->json(['message' => 'Deleted']);
+        return redirect()->route('dashboard')->with('success', 'Company Deleted Successfully!');
     }
 
     // Switch active company

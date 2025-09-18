@@ -20,7 +20,7 @@ This project implements a minimal Laravel backend where a user can create, manag
    - `php artisan breeze:install` (choose Blade)
    - `npm install && npm run dev` (if you want front-end assets)
 7. If using API tokens: `composer require laravel/sanctum` and publish migrations per Sanctum docs, then `php artisan migrate`.
-8. Start server: `php artisan serve`
+8. Start server: `php artisan serve` and `npm run dev`
 
 ## API Endpoints
 - `POST /api/register` — Register (name, email, password, password_confirmation)
@@ -32,9 +32,6 @@ This project implements a minimal Laravel backend where a user can create, manag
 - `PUT /api/companies/{id}` — Update company (auth)
 - `DELETE /api/companies/{id}` — Delete company (auth)
 - `POST /api/companies/switch` — Switch active (company_id) (auth)
-
-### Example requests
-See the `curl` commands in the project README (above).
 
 ## Multi-Tenant Logic
 - Active company stored on `users.active_company_id`.
